@@ -1,6 +1,7 @@
-Troubleshooting control plane failure in kubernetes:
-To troubleshoot a Kubernetes control plane failure, start by checking the status of control plane components (kube-apiserver, kube-scheduler, kube-controller-manager, and etcd) using kubectl commands and examining their logs for errors, then verify node and pod status, and finally, address any network or resource issues. 
-Check Control Plane Component Status:
+# Troubleshooting control plane failure in kubernetes:
+        To troubleshoot a Kubernetes control plane failure, start by checking the status of control plane components (kube-apiserver, kube-scheduler, kube-controller-manager, and etcd)         using kubectl commands and examining their logs for errors, then verify node and pod status, and finally, address any network or resource issues. 
+        Check Control Plane Component Status:
+        
     kubectl get pods -n kube-system: This command lists all pods in the kube-system namespace, which includes the control plane components. 
     kubectl get pods -n kube-system | grep <component-name>: Filter the output to focus on a specific component (e.g., kube-apiserver, kube-scheduler). 
     kubectl describe pod <pod-name> -n kube-system: Provides detailed information about a specific pod, including events and logs. 
