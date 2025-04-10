@@ -86,3 +86,4 @@ Try looking in the following places to identify what is the issue with kube-prox
 - Run the command kubectl describe daemonset kube-proxy -n kube-system to see the status of the kube-proxy daemonset, which is responsible for ensuring there is a kube-proxy running on every Kubernetes node.
   
 Please note that these procedures can help you gather more information about the problem, but additional steps may be needed to resolve the problem. If one of the quick fixes above did not work, you’ll need to undertake a more complex, non-linear diagnosis procedure to identify which parts of the Kubernetes environment contribute to the node not ready problem and resolve it.
+[Ref] (https://komodor.com/learn/how-to-fix-kubernetes-node-not-ready-error/)
