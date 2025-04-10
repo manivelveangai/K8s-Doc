@@ -87,3 +87,10 @@ Try looking in the following places to identify what is the issue with kube-prox
   
 Please note that these procedures can help you gather more information about the problem, but additional steps may be needed to resolve the problem. If one of the quick fixes above did not work, you’ll need to undertake a more complex, non-linear diagnosis procedure to identify which parts of the Kubernetes environment contribute to the node not ready problem and resolve it.
 [Ref] (https://komodor.com/learn/how-to-fix-kubernetes-node-not-ready-error/)
+
+## Common troubleshooting steps:
+
+- Veriy the network pods are running on the sytem by running kubectl get ns and verify the namespace that running for networks. ex kubectl get pod -n calico
+- Default configuration location for network addons /etc/cni/net.d/ verify the configuration file is exist.
+- SSH to the worker node systemctl kubelet status or service kubelet status
+- Run journalctl -u kubelet to verify the kubelet logs based on the error work further with troubleshootng.
